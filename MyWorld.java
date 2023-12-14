@@ -18,5 +18,27 @@ public class MyWorld extends World
         super(600, 400, 1);
         Character character = new Character();
         addObject(character, 300, 300);
+        
+        spawnWaveOne();
+        spawnWaveTwo();
+        spawnFinalBoss();
+    }
+    public void spawnWaveOne() {
+        int x = 400;
+        int y = 150;
+        WaveOne waveone = new WaveOne();
+        addObject(waveone, x, y);
+    }
+    public void spawnWaveTwo() {
+        int x = 370;
+        int y = 150;
+        WaveTwo wavetwo = new WaveTwo();
+        addObject(wavetwo, x, y);
+    }
+    public void spawnFinalBoss() {
+        int x = 400;
+        int y = 150;
+        FinalBoss finalboss = new FinalBoss();
+        addObject(finalboss, x, y);
     }
 }
