@@ -14,6 +14,20 @@ public class Character extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+        if(Greenfoot.getMouseInfo() != null){
+            turnTowards(Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
+        }
+        if(Greenfoot.isKeyDown("a")){
+            move(-2);
+        }
+        if(Greenfoot.isKeyDown("d")){
+            move(2);
+        }
+        if(Greenfoot.isKeyDown("w")){
+            setLocation(getX(), getY() - 2);
+        }
+        if(Greenfoot.isKeyDown("s")){
+            setLocation(getX(), getY() + 2);
+        }
     }
 }
