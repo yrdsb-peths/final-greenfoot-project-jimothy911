@@ -18,16 +18,16 @@ public class Character extends Actor
             turnTowards(Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
         }
         if(Greenfoot.isKeyDown("a")){
-            move(-2);
+            move(-3);
         }
         if(Greenfoot.isKeyDown("d")){
-            move(2);
+            move(3);
         }
         if(Greenfoot.isKeyDown("w")){
-            setLocation(getX(), getY() - 2);
+            setLocation(getX(), getY() - 3);
         }
         if(Greenfoot.isKeyDown("s")){
-            setLocation(getX(), getY() + 2);
+            setLocation(getX(), getY() + 3);
         }
     }
 }
