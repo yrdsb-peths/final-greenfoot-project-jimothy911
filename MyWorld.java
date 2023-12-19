@@ -47,4 +47,10 @@ public class MyWorld extends World
         FinalBoss finalboss = new FinalBoss();
         addObject(finalboss, x, y);
     }
+    public void spawnBullet(){
+        int x = Character.getX();
+        int y = Character.getY();
+        Bullet bullet = new bullet();
+        addObject(bullet, x, y);
+    }
 }
