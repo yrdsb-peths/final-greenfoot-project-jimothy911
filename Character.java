@@ -30,4 +30,9 @@ public class Character extends Actor
             setLocation(getX(), getY() + 3);
         }
     }
+    public void fireBullets(){
+        if(Greenfoot.mousePressed(null)){
+            getWorld().addObject(new Bullet(), getX(), getY());
+        }
+    }
 }
