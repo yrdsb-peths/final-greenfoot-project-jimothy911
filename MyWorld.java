@@ -13,9 +13,8 @@ public class MyWorld extends World
      * 
      */
     private int score = 0;
-    private Label scoreLabel;
-    TitleWorld titleWorld; 
-    public MyWorld(TitleWorld titleWorld)
+    private Label scoreLabel; 
+    public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);
@@ -25,9 +24,6 @@ public class MyWorld extends World
         spawnWaveOne();
         spawnWaveTwo();
         spawnFinalBoss();
-        
-        scoreLabel = new Label(score, 70);
-        addObject(scoreLabel, 50, 50);
     }
     public void spawnWaveOne() {
         int x = 400;
