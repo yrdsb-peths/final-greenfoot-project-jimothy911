@@ -14,9 +14,15 @@ public class Character extends Actor
      */
     public void act()
     {
+        atMouse();
+        moveThree(); 
+    }    
+    public void atMouse(){
         if(Greenfoot.getMouseInfo() != null){
             turnTowards(Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
         }
+    }
+    public void moveThree(){
         if(Greenfoot.isKeyDown("a")){
             move(-3);
         }
@@ -28,6 +34,12 @@ public class Character extends Actor
         }
         if(Greenfoot.isKeyDown("s")){
             setLocation(getX(), getY() + 3);
+        }
+    }
+    public void fireBullets(){
+        if(Greenfoot.mousePressed(null)){
+            Bullet bullet = new Bullet();
+            getWorld().addObject(new Bullet(), getX(), getY());
         }
     }
 }

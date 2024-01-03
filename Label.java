@@ -11,9 +11,16 @@ public class Label extends Actor
     private String value;
     private int fontSize;
     private Color lineColor = Color.BLACK;
+<<<<<<< HEAD
     private Color fillColor = Color.WHITE;
     
     private static final Color transparent = new Color(0,0,0,0);
+=======
+    private Color fillColor = Color.YELLOW;
+    
+    private static final Color transparent = new Color(0,0,0,0);
+
+>>>>>>> 86035508678c363651b8d0e429597227c757e369
     public Label(int value, int fontSize)
     {
         this(Integer.toString(value), fontSize);
