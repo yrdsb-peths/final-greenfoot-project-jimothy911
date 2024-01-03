@@ -8,17 +8,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Cover extends World
 {
-
     /**
      * Constructor for objects of class Cover.
      * 
      */
-    public Cover(){    
+    public Cover()  
+    {    
         super(600, 400, 1); 
         Label titleLabel = new Label("Hungry Elephant", 80);
         addObject(titleLabel, getWidth()/2, getHeight()/2);
         
-        addObject(new Banana(), 0, 0);
+        addObject(new WaveOne(), 0, 0);
     }
     
     public void act() {
