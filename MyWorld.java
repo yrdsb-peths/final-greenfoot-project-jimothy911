@@ -13,13 +13,15 @@ public class MyWorld extends World
      * 
      */
     private int score = 0;
-    private Label scoreLabel; 
-    public MyWorld()
+    private Label scoreLabel;
+    Cover titleWorld;  
+    public MyWorld(Cover titleWorld)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);
         Character character = new Character();
         addObject(character, 300, 300);
+        this.titleWorld = titleWorld;
         
         spawnWaveOne();
         spawnWaveTwo();

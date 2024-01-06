@@ -20,7 +20,6 @@ public class Cover extends World
         
         addObject(new WaveOne(), 0, 0);
     }
-    
     public void act() {
         if(Greenfoot.mouseClicked(null)){
             MyWorld world = new MyWorld(this);
