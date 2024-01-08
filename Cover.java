@@ -15,10 +15,12 @@ public class Cover extends World
     public Cover()  
     {    
         super(600, 400, 1); 
-        Label titleLabel = new Label("Hungry Elephant", 80);
-        addObject(titleLabel, getWidth()/2, getHeight()/2);
-        
-        addObject(new WaveOne(), 0, 0);
+        addObject(new BackgroundTwo(), 300, 200);
+        Label titleLabel = new Label("Space Shooter 1", 80);
+        Label titleLabelTwo = new Label("'Click Mouse to Start'", 30);
+        addObject(titleLabel, getWidth()/2, getHeight()/3);
+        addObject(titleLabelTwo, getWidth()/2, getHeight()/2 -1);
+        addObject(new Character(), 150, 100);
     }
     public void act() {
         if(Greenfoot.mouseClicked(null)){
