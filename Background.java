@@ -8,12 +8,26 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Background extends Actor
 {
-    /**
-     * Act - do whatever the Background wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    private int imageWidth;
+    private int offset = 120;
+    private Background otherBackground;
+    private int speed = 5;
+    
+    public Background() {
+        imageWidth = getImage().getWidth();    
+    }
+    public void setOtherBackground(Background otherBackground) {
+        this.otherBackground = otherBackground;
+    }
+    public void increaseSpeed() {
+        speed += 2;
+    }
     public void act()
     {
-        // Add your action code here.
+        if(getX() < -imageWidth + offset) {
+            int newX = otherBackground.getX() + imageWidth;
+            setLocation(newX, getY());
+        }
+        move(-speed);
     }
 }
