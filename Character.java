@@ -15,7 +15,8 @@ public class Character extends Actor
     public void act()
     {
         atMouse();
-        moveThree(); 
+        moveThree();
+        fireBullets();
     }    
     public void atMouse(){
         if(Greenfoot.getMouseInfo() != null){
@@ -40,6 +41,7 @@ public class Character extends Actor
         if(Greenfoot.mousePressed(null)){
             Bullet bullet = new Bullet();
             getWorld().addObject(new Bullet(), getX(), getY());
+            move(2);
         }
     }
 }

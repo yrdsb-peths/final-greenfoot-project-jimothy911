@@ -21,7 +21,7 @@ public class Bullet extends Actor
     {
         atBullet();
         if(Greenfoot.mousePressed(null)){
-            move(2);
+            move(100);
         }
     }
 }
