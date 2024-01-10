@@ -18,10 +18,12 @@ public class Bullet extends Actor
         }
     }
     public void act()
-    {
-        atBullet();
-        if(Greenfoot.mousePressed(null)){
-            move(100);
+    { 
+    int speed=4;
+    move(speed);
+    if (isAtEdge())
+        {
+            getWorld().removeObject(this);
         }
-    }
+   }
 }

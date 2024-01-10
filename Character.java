@@ -39,9 +39,10 @@ public class Character extends Actor
     }
     public void fireBullets(){
         if(Greenfoot.mousePressed(null)){
-            Bullet bullet = new Bullet();
-            getWorld().addObject(new Bullet(), getX(), getY());
-            move(2);
+            World world = getWorld();
+                int x = (int)(this.getX());
+                int y = (int)(this.getY());
+            world.addObject(new Bullet(),x,y);
         }
     }
 }
