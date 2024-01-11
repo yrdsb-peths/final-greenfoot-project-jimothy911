@@ -27,21 +27,15 @@ public class MyWorld extends World
         spawnWaveTwo();
         spawnFinalBoss();
     }
-    public void spawnWaveOne() {
-        int x = 400;
-        int y = 150;
-        WaveOne waveone = new WaveOne();
-        addObject(waveone, x, y);
-    }
     public void spawnWaveTwo() {
-        int x = 370;
-        int y = 150;
-        WaveTwo wavetwo = new WaveTwo();
-        addObject(wavetwo, x, y);
+        int x = 600;
+        int y = Greenfoot.getRandomNumber(400);
+        WaveTwo waveTwo = new WaveTwo();
+        addObject(waveTwo, x, y);
     }
     public void spawnFinalBoss() {
-        int x = 400;
-        int y = 150;
+        int x = 600;
+        int y = Greenfoot.getRandomNumber(400);
         FinalBoss finalboss = new FinalBoss();
         addObject(finalboss, x, y);
     }
@@ -52,5 +46,11 @@ public class MyWorld extends World
     public void increaseScore() {
         score = score + 1;
         scoreLabel.setValue(score);
+    }
+    public void spawnWaveOne(){
+        int x = 600;
+        int y = Greenfoot.getRandomNumber(400);
+        WaveOne waveOne = new WaveOne();
+        addObject(waveOne, x, y);
     }
 }

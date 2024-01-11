@@ -12,18 +12,37 @@ public class Bullet extends Actor
      * Act - do whatever the Bullet wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void atBullet(){
-        if(Greenfoot.getMouseInfo() != null){
-            turnTowards(Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
-        }
-    }
     public void act()
     { 
     int speed=4;
     move(speed);
-    if (isAtEdge())
+    if(isAtEdge())
         {
             getWorld().removeObject(this);
         }
    }
+   private void checkIfHit(){
+        if(isTouching(WaveOne.class)) {
+            removeTouching(WaveOne.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.spawnWaveOne();
+            world.increaseScore();
+        }
+    }
+    private void checkIfHitTwo(){
+        if(isTouching(WaveTwo.class)) {
+            removeTouching(WaveTwo.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.spawnWaveTwo();
+            world.increaseScore();
+        }
+    }
+    private void checkIfHitBoss(){
+        if(isTouching(FinalBoss.class)) {
+            removeTouching(FinalBoss.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.spawnFinalBoss();
+            world.increaseScore();
+        }
+    }
 }
