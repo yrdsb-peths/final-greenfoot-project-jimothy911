@@ -48,8 +48,7 @@ public class Label extends Actor
     {
         this.value = value;
         updateImage();
-    }
-    
+    } 
     /**
      * Sets the value as integer
      * 
@@ -60,7 +59,6 @@ public class Label extends Actor
         this.value = Integer.toString(value);
         updateImage();
     }
-    
     /**
      * Sets the line color of the text
      * 
@@ -71,7 +69,6 @@ public class Label extends Actor
         this.lineColor = lineColor;
         updateImage();
     }
-    
     /**
      * Sets the fill color of the text
      * 
@@ -82,8 +79,6 @@ public class Label extends Actor
         this.fillColor = fillColor;
         updateImage();
     }
-    
-
     /**
      * Update the image on screen to show the current value.
      */
