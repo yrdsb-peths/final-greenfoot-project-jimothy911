@@ -23,10 +23,12 @@ public class MyWorld extends World
         Character character = new Character();
         addObject(character, 50, 200);
         this.titleWorld = titleWorld;
+        scoreLabel = new Label(score,70);
         
         spawnWaveOne();
         spawnWaveTwo();
         spawnFinalBoss();
+        addObject(scoreLabel, 50, 50);
     }
     public void spawnWaveTwo(){
         int x = 600;
