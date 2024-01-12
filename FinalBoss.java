@@ -14,6 +14,12 @@ public class FinalBoss extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
+        move(-4);
+        
+        MyWorld world = (MyWorld) getWorld();
+        if(getX() > world.getWidth()){
+            world.gameOver();
+            world.removeObject(this);
+        }
     }    
 }

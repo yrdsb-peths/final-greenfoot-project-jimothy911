@@ -12,8 +12,14 @@ public class WaveOne extends Actor
      * Act - do whatever the WaveOne wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act() 
+    public void act()
     {
-        // Add your action code here.
-    }    
+        move(-1);
+        
+        MyWorld world = (MyWorld) getWorld();
+        if(getX() > world.getWidth()){
+            world.gameOver();
+            world.removeObject(this);
+        }
+    }   
 }
