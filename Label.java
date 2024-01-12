@@ -15,7 +15,7 @@ public class Label extends Actor
 {
     private String value;
     private int fontSize;
-    private Color lineColor = Color.BLACK;
+    private Color lineColor = Color.WHITE;
     private Color fillColor = Color.BLACK;
     
     private static final Color transparent = new Color(0,0,0,0);
@@ -28,7 +28,6 @@ public class Label extends Actor
     {
         this(Integer.toString(value), fontSize);
     }
-    
     /**
      * Create a new label, initialise it with the needed text and the font size 
      */
@@ -38,7 +37,6 @@ public class Label extends Actor
         this.fontSize = fontSize;
         updateImage();
     }
-
     /**
      * Sets the value  as text
      * 

@@ -16,10 +16,12 @@ public class Bullet extends Actor
     { 
     int speed=4;
     move(speed);
-    if(isAtEdge())
-        {
+    if(isAtEdge()){
             getWorld().removeObject(this);
-        }
+    }
+    checkIfHit();
+    checkIfHitTwo();
+    checkIfHitBoss();
    }
    private void checkIfHit(){
         if(isTouching(WaveOne.class)) {

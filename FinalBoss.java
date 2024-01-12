@@ -17,7 +17,7 @@ public class FinalBoss extends Actor
         move(-4);
         
         MyWorld world = (MyWorld) getWorld();
-        if(getX() > world.getWidth()){
+        if(getX() <= 0){
             world.gameOver();
             world.removeObject(this);
         }

@@ -17,7 +17,7 @@ public class WaveOne extends Actor
         move(-1);
         
         MyWorld world = (MyWorld) getWorld();
-        if(getX() > world.getWidth()){
+        if(getX() <= 0){
             world.gameOver();
             world.removeObject(this);
         }
