@@ -19,9 +19,11 @@ public class Bullet extends Actor
     if(isAtEdge()){
             getWorld().removeObject(this);
     }
-    checkIfHit();
-    checkIfHitTwo();
-    checkIfHitBoss();
+    else{
+        checkIfHit();
+        checkIfHitTwo();
+        checkIfHitBoss();
+    }   
    }
    private void checkIfHit(){
         if(isTouching(WaveOne.class)) {

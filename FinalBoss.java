@@ -18,8 +18,11 @@ public class FinalBoss extends Actor
         
         MyWorld world = (MyWorld) getWorld();
         if(getX() <= 0){
-            world.gameOver();
             world.removeObject(this);
+            world.x += 1;
+            if(world.x==3){
+                world.gameOver();
+            }
         }
     }    
 }

@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class WaveTwo extends WaveOne
+public class WaveTwo extends Actor
 {
     /**
      * Act - do whatever the WaveTwo wants to do. This method is called whenever
@@ -18,8 +18,11 @@ public class WaveTwo extends WaveOne
         
         MyWorld world = (MyWorld) getWorld();
         if(getX() <= 0){
-            world.gameOver();
             world.removeObject(this);
+            world.x += 1;
+            if(world.x==3){
+                world.gameOver();
+            }
         }
     }
 }

@@ -15,6 +15,7 @@ public class MyWorld extends World
     private int score = 0;
     private Label scoreLabel;
     Cover titleWorld; 
+    public int x = 0;
     
     public MyWorld(Cover titleWorld)
     {    
@@ -23,12 +24,13 @@ public class MyWorld extends World
         Character character = new Character();
         addObject(character, 50, 200);
         this.titleWorld = titleWorld;
-        scoreLabel = new Label(score,70);
+        scoreLabel = new Label(score,30);
         
+        showText("Score :", 50,50);
         spawnWaveOne();
         spawnWaveTwo();
         spawnFinalBoss();
-        addObject(scoreLabel, 50, 50);
+        addObject(scoreLabel, 100, 50);
     }
     public void spawnWaveTwo(){
         int x = 600;

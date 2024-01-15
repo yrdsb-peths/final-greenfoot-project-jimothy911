@@ -16,11 +16,13 @@ public class Cover extends World
     {    
         super(600, 400, 1); 
         addObject(new BackgroundTwo(), 300, 200);
-        Label titleLabel = new Label("Space Shooter 1", 80);
+        Label titleLabel = new Label("Balloon Popper", 80);
         Label titleLabelTwo = new Label("'Click Mouse to Start'", 30);
+        Label titleLabelThree = new Label(" ' Click Space for Rules ' ", 25);
         addObject(titleLabel, getWidth()/2, getHeight()/3);
         addObject(titleLabelTwo, getWidth()/2, getHeight()/2 -1);
         addObject(new Character(), 150, 100);
+        addObject(titleLabelThree, 300, 300);
     }
     public void act() {
         if(Greenfoot.mouseClicked(null)){
