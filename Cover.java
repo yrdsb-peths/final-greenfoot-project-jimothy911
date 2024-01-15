@@ -23,6 +23,9 @@ public class Cover extends World
         addObject(titleLabelTwo, getWidth()/2, getHeight()/2 -1);
         addObject(new Character(), 150, 100);
         addObject(titleLabelThree, 300, 300);
+        addObject(new CoverOne(), 400, 100);
+        addObject(new CoverTwo(), 450, 100);
+        addObject(new CoverThree(), 500, 100);
     }
     public void act() {
         if(Greenfoot.mouseClicked(null)){
