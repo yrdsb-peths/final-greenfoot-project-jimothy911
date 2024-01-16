@@ -14,6 +14,11 @@ public class Friend extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+        move(-6);        
+        MyWorld world = (MyWorld) getWorld();
+        if(getX() <= 0){
+            world.removeObject(this);
+            world.spawnBomb();
+        }
     }
 }

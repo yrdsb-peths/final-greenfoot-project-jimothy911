@@ -23,6 +23,7 @@ public class Bullet extends Actor
         checkIfHit();
         checkIfHitTwo();
         checkIfHitBoss();
+        checkIfHitBomb();
     }   
    }
    private void checkIfHit(){
@@ -38,7 +39,7 @@ public class Bullet extends Actor
             removeTouching(WaveTwo.class);
             MyWorld world = (MyWorld) getWorld();
             world.spawnWaveTwo();
-            world.increaseScore();
+            world.increaseScoreTwo();
         }
     }
     private void checkIfHitBoss(){
@@ -46,7 +47,15 @@ public class Bullet extends Actor
             removeTouching(FinalBoss.class);
             MyWorld world = (MyWorld) getWorld();
             world.spawnFinalBoss();
-            world.increaseScore();
+            world.increaseScoreThree();
+        }
+    }
+    private void checkIfHitBomb(){
+        if(isTouching(Friend.class)) {
+            removeTouching(Friend.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.spawnBomb();
+            world.decreaseScore();
         }
     }
 }
