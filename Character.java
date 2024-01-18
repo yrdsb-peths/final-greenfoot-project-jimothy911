@@ -17,12 +17,21 @@ public class Character extends Actor
         atMouse();
         moveThree();
         fireBullets();
-    }    
+    }
+    /**
+     * character is  pointing at mouse cursor
+     */
     public void atMouse(){
         if(Greenfoot.getMouseInfo() != null){
             turnTowards(Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
         }
     }
+    /**
+     * a key moves character opposite to the cursor
+     * d key moves character to the cursor
+     * w key moves character up
+     * s key moves character down
+     */
     public void moveThree(){
         if(Greenfoot.isKeyDown("a")){
             move(-3);
@@ -37,6 +46,10 @@ public class Character extends Actor
             setLocation(getX(), getY() + 3);
         }
     }
+    /**
+     * left click of the mouse shoots bullets out of the character
+     * bullets spawn directly on the character
+     */
     public void fireBullets(){
         if(Greenfoot.mousePressed(null)){
             World world = getWorld();

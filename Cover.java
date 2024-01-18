@@ -10,7 +10,8 @@ public class Cover extends World
 {
     /**
      * Constructor for objects of class Cover.
-     * 
+     * Adding all the images and Labels
+     * Makes up the cover Page
      */
     public Cover()  
     {    
@@ -27,6 +28,10 @@ public class Cover extends World
         addObject(new CoverTwo(), 450, 100);
         addObject(new CoverThree(), 500, 100);
     }
+    /**
+     * Allowing you to either go from cover page to rules or into the game
+     * Rules page is part of cover so you can enter game from the rules page
+     */
     public void act() {
         if(Greenfoot.mouseClicked(null)){
             MyWorld world = new MyWorld(this);

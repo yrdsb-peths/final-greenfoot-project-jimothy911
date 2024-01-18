@@ -26,6 +26,12 @@ public class Bullet extends Actor
         checkIfHitBomb();
     }   
    }
+   /**
+    * removes "wave one" if the bullet touches the actor
+    * also plays a balloon popping sound
+    * repspawns a new "wave one"
+    * increases score by 1
+    */
    private void checkIfHit(){
         if(isTouching(WaveOne.class)) {
             removeTouching(WaveOne.class);
@@ -35,6 +41,12 @@ public class Bullet extends Actor
             world.increaseScore();
         }
     }
+    /**
+    * removes "wave two" if the bullet touches the actor
+    * plays a balloon popping sound
+    * repspawns a new "wave two"
+    * increases score by 2
+    */
     private void checkIfHitTwo(){
         if(isTouching(WaveTwo.class)) {
             removeTouching(WaveTwo.class);
@@ -44,6 +56,12 @@ public class Bullet extends Actor
             world.increaseScoreTwo();
         }
     }
+    /**
+    * removes "wave three" if the bullet touches the actor
+    * plays a balloon popping sound
+    * repspawns a new "wave three"
+    * increases score by 3
+    */
     private void checkIfHitBoss(){
         if(isTouching(FinalBoss.class)) {
             removeTouching(FinalBoss.class);
@@ -53,6 +71,12 @@ public class Bullet extends Actor
             world.increaseScoreThree();
         }
     }
+     /**
+    * removes "bomb" if the bullet touches bomb
+    * plays a "boom" sound
+    * repspawns a new "bomb"
+    * halves the total score
+    */
     private void checkIfHitBomb(){
         if(isTouching(Friend.class)) {
             removeTouching(Friend.class);

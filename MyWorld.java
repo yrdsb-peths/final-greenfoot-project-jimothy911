@@ -16,7 +16,9 @@ public class MyWorld extends World
     private Label scoreLabel;
     Cover titleWorld; 
     public int x = 0;
-    
+    /**
+     * Initiating the game and placing Actors, background and score
+     */
     public MyWorld(Cover titleWorld)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -33,18 +35,10 @@ public class MyWorld extends World
         addObject(scoreLabel, 100, 50);
         spawnBomb();
     }
-    public void spawnWaveTwo(){
-        int x = 600;
-        int y = Greenfoot.getRandomNumber(400);
-        WaveTwo waveTwo = new WaveTwo();
-        addObject(waveTwo, x, y);
-    }
-    public void spawnFinalBoss(){
-        int x = 600;
-        int y = Greenfoot.getRandomNumber(400);
-        FinalBoss finalboss = new FinalBoss();
-        addObject(finalboss, x, y);
-    }
+    /**
+     * A method that removes all objects from the game
+     * Then proceeds to make a game over screen which tells you your score at the end
+     */
     public void gameOver(){
         Label gameOverLabel = new Label("Game Over", 90);
         Label finalScore = new Label("Score : " , 100);
@@ -68,28 +62,67 @@ public class MyWorld extends World
         addObject(new CoverOne(), 325, 320);
         addObject(new CoverOne(), 300, 350);
     }
+    /**
+     * the score value increases by one
+     */
     public void increaseScore() {
         score = score + 1;
         scoreLabel.setValue(score);
     }
+    /**
+     * score value increases by two
+     */
     public void increaseScoreTwo() {
         score = score + 2;
         scoreLabel.setValue(score);
     }
+    /**
+     * score value increases by three
+     */
     public void increaseScoreThree() {
         score = score + 3;
         scoreLabel.setValue(score);
     }
+    /**
+     * score value cuts in half
+     */
     public void decreaseScore(){
         score = score/2;
         scoreLabel.setValue(score);
     }
+    /**
+     * method that spawns "waveOne"
+     * random y value from the right of the game.
+     */
     public void spawnWaveOne(){
         int x = 600;
         int y = Greenfoot.getRandomNumber(400);
         WaveOne waveOne = new WaveOne();
         addObject(waveOne, x, y);
     }
+    /**
+     * Method that spawns "waveTwo" 
+     * spawns from the right side of the game with a random y value
+     */
+    public void spawnWaveTwo(){
+        int x = 600;
+        int y = Greenfoot.getRandomNumber(400);
+        WaveTwo waveTwo = new WaveTwo();
+        addObject(waveTwo, x, y);
+    }
+    /**
+     * Method that spawns "FinalBoss" or in game a Balloon
+     * spawns from the right side of the game with a random y value
+     */
+    public void spawnFinalBoss(){
+        int x = 600;
+        int y = Greenfoot.getRandomNumber(400);
+        FinalBoss finalboss = new FinalBoss();
+        addObject(finalboss, x, y);
+    }
+    /**
+     * spawns bomb from right side of game with random y value
+     */
     public void spawnBomb(){
         int x = 600;
         int y = Greenfoot.getRandomNumber(400);

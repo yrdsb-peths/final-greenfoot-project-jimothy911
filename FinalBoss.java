@@ -9,8 +9,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class FinalBoss extends Actor
 {
     /**
-     * Act - do whatever the FinalBoss wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * "final boss" moves at a speed of 4 to the left
+     * actor is removed if he reaches the left side of the game
+     * adds 1 to  variable x
+     * every wave/balloon adds 1 to x when they cross the left side
+     * once every balloon has crossed and x = 3, game  over
      */
     public void act() 
     {
