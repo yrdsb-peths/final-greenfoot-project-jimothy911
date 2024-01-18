@@ -28,6 +28,7 @@ after they reach the end so  you  will lose out on a lot of points. Your score w
 
 How to  reach end game screen: Just play the game  and do not do anything, if you want to go even faster you can make the speed much higher
 in a way that it makes the game over screen appear faster
+
 PRO TIP: DON'T HIT THE BOMB  EVEN IF IT  COST ONE OF YOUR BALLOONS!
 
 
