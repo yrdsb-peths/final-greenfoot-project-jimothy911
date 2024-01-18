@@ -25,8 +25,8 @@ public class MyWorld extends World
         addObject(character, 50, 200);
         this.titleWorld = titleWorld;
         scoreLabel = new Label(score,30);
-        
-        showText("Score :", 50,50);
+        Label text = new Label("Score :", 25);
+        addObject(text, 50, 50);
         spawnWaveOne();
         spawnWaveTwo();
         spawnFinalBoss();
@@ -47,7 +47,26 @@ public class MyWorld extends World
     }
     public void gameOver(){
         Label gameOverLabel = new Label("Game Over", 90);
-        addObject(gameOverLabel, getWidth()/2, getHeight()/2);
+        Label finalScore = new Label("Score : " , 100);
+        Label scoreLabelTwo = new Label(score,100);
+        GameOver endPage = new GameOver();
+        removeObjects(getObjects(null));
+        addObject(endPage, 300, 200);
+        Greenfoot.playSound("zapsplat_human_male_voice_says_game_over_004_15729.mp3");
+        addObject(gameOverLabel, getWidth()/2, 75);
+        addObject(finalScore, getWidth()/3, 200);
+        addObject(scoreLabelTwo, 400, 200);
+        addObject(new CoverThree(), 500, 275);
+        addObject(new CoverThree(), 500, 300);
+        addObject(new CoverThree(), 500, 325);
+        addObject(scoreLabelTwo, 400, 200);
+        addObject(new CoverTwo(), 90, 280);
+        addObject(new CoverTwo(), 90, 320);
+        addObject(new CoverTwo(), 90, 350);
+        addObject(scoreLabelTwo, 400, 200);
+        addObject(new CoverOne(), 275, 280);
+        addObject(new CoverOne(), 325, 320);
+        addObject(new CoverOne(), 300, 350);
     }
     public void increaseScore() {
         score = score + 1;

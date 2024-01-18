@@ -14,7 +14,7 @@ public class Friend extends Actor
      */
     public void act()
     {
-        move(-6);        
+        move(-3);        
         MyWorld world = (MyWorld) getWorld();
         if(getX() <= 0){
             world.removeObject(this);

@@ -29,6 +29,7 @@ public class Bullet extends Actor
    private void checkIfHit(){
         if(isTouching(WaveOne.class)) {
             removeTouching(WaveOne.class);
+            Greenfoot.playSound("popsound.mp3");
             MyWorld world = (MyWorld) getWorld();
             world.spawnWaveOne();
             world.increaseScore();
@@ -37,6 +38,7 @@ public class Bullet extends Actor
     private void checkIfHitTwo(){
         if(isTouching(WaveTwo.class)) {
             removeTouching(WaveTwo.class);
+            Greenfoot.playSound("popsound.mp3");
             MyWorld world = (MyWorld) getWorld();
             world.spawnWaveTwo();
             world.increaseScoreTwo();
@@ -45,6 +47,7 @@ public class Bullet extends Actor
     private void checkIfHitBoss(){
         if(isTouching(FinalBoss.class)) {
             removeTouching(FinalBoss.class);
+            Greenfoot.playSound("popsound.mp3");
             MyWorld world = (MyWorld) getWorld();
             world.spawnFinalBoss();
             world.increaseScoreThree();
@@ -53,6 +56,7 @@ public class Bullet extends Actor
     private void checkIfHitBomb(){
         if(isTouching(Friend.class)) {
             removeTouching(Friend.class);
+            Greenfoot.playSound("zapsplat_explosion_big_fireball_002_89752.mp3");
             MyWorld world = (MyWorld) getWorld();
             world.spawnBomb();
             world.decreaseScore();
